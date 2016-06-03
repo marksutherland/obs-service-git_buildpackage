@@ -121,7 +121,7 @@ def fetch_upstream(url, revision, out_dir):
 
         safe_run(['git', 'clone', '--no-checkout', url, clone_dir],
                  cwd=out_dir, interactive=sys.stdout.isatty())
-        safe_run(['git', 'fetch', origin,
+        safe_run(['git', 'fetch', 'origin',
                   'refs/pull-requests/*:refs/remotes/origin/pull-requests/*'],
                  cwd=out_dir, interactive=sys.stdout.isatty())
 #        safe_run(['git', 'submodule', 'update', '--init', '--recursive'],
